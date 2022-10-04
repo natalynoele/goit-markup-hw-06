@@ -695,6 +695,7 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
 .mailing-title {
   margin-bottom: 20px;
   color: var(--secondary-title-color);
@@ -750,6 +751,7 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
 }
+
 .icon-send {
   margin-left: 10px;
   fill: var(--secondary-title-color);
@@ -818,9 +820,9 @@ body {
   fill: var(--accent-color);
 }
 
-/* .no-scroll {
+.no-scroll {
   overflow: hidden;
-} */
+}
 
 @keyframes appearModal {
   0% {
@@ -929,31 +931,36 @@ body {
   letter-spacing: var(--primary-letter-spacing);
 
   color: var(--accent-color);
+  outline: none;
+}
+
+.terms-link:focus {
+border: 1px solid var(--accent-color);
 }
 
 .check-icon {
+  position: relative;
    width: 16px;
   height: 15px;
   margin-right: 7px;
   display: inline-block;
   border: 2px solid #212121;
-  border-radius: 4px;
+  border-radius: 3px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.terms-input:hover + .check-icon,
+.terms-input:focus + .check-icon {
+  border: 2px solid var(--accent-color);
 }
 
 .terms-input:checked + .check-icon {
   border: none;
-  background-color: #2196f3;
-  background-image: url(../images/check.svg);
-  background-size: contain;  
-  background-position: center;
-  background-origin: border-box;
-  /* background-repeat: no-repeat; */
-}
-
-
+  background-image: url(../images/icon-check.svg);  
+  }
 
 .order-btn {
+  outline: none;
   display: block;
   margin: 0 auto;
   width: 200px;
@@ -970,3 +977,9 @@ font-size: 16px;
 line-height: 1.88;
 letter-spacing: 0.06em;
 }
+
+.order-btn:focus,
+.order-btn:hover {
+  border: 1px solid var(--accent-color);
+}
+
