@@ -696,6 +696,7 @@ body {
   justify-content: space-between;
 }
 
+
 .mailing-title {
   margin-bottom: 20px;
   color: var(--secondary-title-color);
@@ -706,29 +707,27 @@ body {
   text-transform: uppercase;
 }
 
-.mailing-field {
-  position: relative;
-  margin-right: 12px;
-}
-
-.mailing-label {
-  position: absolute;
-  top: 50%;
-  left: 16px;
-  transform: translateY(-50%);
-  color: rgba(255, 255, 255, 0.6);
-}
 
 .mailing-input {
   width: 358px;
   height: 50px;
-  padding-right: 16px;
-  padding-left: 78px;
+  padding: 15px 16px; 
+  margin-right: 12px;
   background-color: transparent;
+  outline: none;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   color: rgba(255, 255, 255, 0.6);
+}
+
+.mailing::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.mailing-input:hover,
+.mailing-input:focus {
+  border: 1px solid var(--accent-color);
 }
 
 .mailing-btn {
@@ -904,6 +903,10 @@ body {
 .order-comment {
   padding: 12px 16px;
   margin-bottom: 20px;
+  border: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
 }
 
 .order-terms {
